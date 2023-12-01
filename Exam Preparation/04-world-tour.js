@@ -29,15 +29,10 @@ function worldTour(arr) {
             let [oldStr, newStr] = tokens;
 
             if (stops.includes(oldStr)) {
-                if(oldStr == newStr){
-                    console.log(stops);
-                }else{
-                while (stops.includes(oldStr)) {
-                    stops = stops.replace(oldStr, newStr);
-                }
-                console.log(stops);
+               stops = stops.split(oldStr).join(newStr);
             }
-            }
+
+            console.log(stops);
         }
 
         command = arr.shift();
